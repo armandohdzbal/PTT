@@ -1,0 +1,30 @@
+LEX11PTTMapper V1.0
+
+* Acerca de la aplicación LEX11PTTMapper
+
+La aplicación LEX11PTTMapper ha sido diseñada para reslver el problema de compatbilidad de Tactilon AGNET
+con algunos modelos de terminales móviles y accesorios de audio, problema con el cual no puede ser utiliado
+el botón de PTT y SOS de manera nativa con AGNET.
+
+Este desarrollo implementa un driver el cual detecta las acciones de presión y liberación de botón fìsico,
+y lanza los intents necesarios a la aplicación cliente de AGNET en la terminal móvil para iniciar y terminar
+la comunicación vía Push-To-Talk, iniciar una llamada de emergencia, y realizar el cambio de grupos de comunicación.
+
+* Instrucciones de instalación
+
+1) Instalar el APK de LEX11PTTMapper en la terminal móvil. Esto puede ser enviando el APK desde un MDM o bien
+instalando manualmente el APK, para ello se requieren permisos de instslación desde fuentes desconocidas.
+
+2) Ingresar al menú de configuración de Android, seleccionar la opción de accesibilidad. De ahí seleccionar la aplicación
+LEX11PTTMapper y habilitar los servicios de accesibilidad para esta aplicación vía el swith que se indica en esta pantalla.
+
+* Modelos compatibles:
+
+- Motorola LEX11
+- Sonim XP8 (Android versión 10)
+- Cyrus CM17
+- Umidigi Bison
+- Hytera Body Worn Camera
+
+Para actualizar e incluir más modelos compatibles se debe mapear manualmente los Key y Scan code de los botones de las
+muevas terminales y se deben incluir en los eventos de detección de eventos de teclas y botiones en el accessibility service.
